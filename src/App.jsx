@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import backgroundMap from "./assets/base.png";
 import { regionStyles } from "./regionStyles";
@@ -34,15 +33,21 @@ const App = () => {
           alt="Illinois River Map"
           className="w-full h-full object-contain"
         />
-        {regions.map((region, i) =>
-          currentRegions[i] === "Y" ? (
-            <div
-              key={i}
-              className="absolute opacity-50"
-              style={regionStyles[i]}
-            ></div>
-          ) : null
-        )}
+        {regions.map((region, i) => (
+          <div
+            key={i}
+            className={`absolute transition-opacity duration-300 pointer-events-none ${
+              currentRegions[i] === "Y" ? "opacity-60" : "opacity-0"
+            }`}
+            style={{
+              ...regionStyles[i],
+              backgroundColor: regionStyles[i].backgroundColor,
+              borderRadius: "8px",
+              width: regionStyles[i].width,
+              height: regionStyles[i].height
+            }}
+          ></div>
+        ))}
         <div className="absolute top-4 left-4 bg-white px-4 py-2 rounded shadow">
           <button
             onClick={() => changeYear(-1)}
@@ -75,7 +80,7 @@ const App = () => {
           </thead>
           <tbody>
             {years.map((year, yIdx) => (
-              <tr key={yIdx}>
+              <tr key={yIdx} className={yIdx === currentYearIndex ? "bg-yellow-100" : ""}>
                 <td className="border px-2 text-center">{year}</td>
                 {regions.map((_, rIdx) => (
                   <td className="border px-2" key={rIdx}>

@@ -1,8 +1,37 @@
-
 export const regionStyles = [
-  { top: "20%", left: "30%", width: "8%", height: "8%", backgroundColor: "red" },
-  { top: "30%", left: "45%", width: "8%", height: "8%", backgroundColor: "orange" },
-  { top: "40%", left: "35%", width: "8%", height: "8%", backgroundColor: "yellow" },
-  { top: "50%", left: "50%", width: "8%", height: "8%", backgroundColor: "green" },
-  { top: "60%", left: "40%", width: "8%", height: "8%", backgroundColor: "blue" },
+  {
+    top: "73%",
+    left: "17%",
+    width: "12%",
+    height: "8%",
+    backgroundColor: "red"
+  },
+  {
+    top: "61%",
+    left: "27%",
+    width: "10%",
+    height: "6%",
+    backgroundColor: "green"
+  },
+  {
+    top: "47%",
+    left: "36%",
+    width: "10%",
+    height: "6%",
+    backgroundColor: "orange"
+  },
+  {
+    top: "33%",
+    left: "46%",
+    width: "11%",
+    height: "6%",
+    backgroundColor: "blue"
+  },
+  {
+    top: "18%",
+    left: "58%",
+    width: "12%",
+    height: "6%",
+    backgroundColor: "purple"
+  }
 ];
